@@ -1,0 +1,90 @@
+ion-header {
+    background-color: var(--ion-color-light);
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--ion-color-fav);
+    border-radius: 50%;
+} 
+
+ion-header {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-content {
+    --padding-start: 10%;
+    --padding-end: 10%;
+    --ion-background-color: var(--ion-color-light);
+}
+
+form {
+    margin: 0 auto;
+}
+
+form ion-item {
+    --background: var(--ion-color-primary-contrast);
+}
+
+ion-note {
+    text-align: end;
+    display: block;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+ion-button {
+    white-space: pre-wrap
+}
+
+ion-content div {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#facebookIcon {
+    color: var(--ion-color-medium);
+}
+
+ion-content div:nth-child(2) {
+    flex-direction: column;
+}
+
+ion-content div:nth-child(3) {
+    flex-direction: row;
+}
+
+#signIn, #signUp {
+    border: 1px solid var(--ion-color-fav);
+    border-radius: 20px;
+    text-transform: none;
+    width: 100px;
+}
+
+#signIn {
+    color: var(--ion-color-light);
+    background-color: var(--ion-color-fav);
+}
+
+#signUp {
+    color: var(--ion-color-fav);
+}
+
+ion-footer {
+    background-color: var(--ion-color-light);
+}
+
+ion-footer ion-note {
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}

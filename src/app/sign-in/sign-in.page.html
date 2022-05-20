@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+        <div id="circle"></div>
+        <div>
+
+          <ion-title>Sign In</ion-title>
+        </div>
+</ion-header>
+
+<ion-content>
+  <form>
+
+    <ion-item>
+      <ion-label><ion-icon name="mail-open-outline" size="small"></ion-icon></ion-label>
+      <ion-input placeholder="E-mail" type="email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="lock-open-outline" size="small"></ion-icon></ion-label>
+      <ion-input placeholder="Password" type="password"></ion-input>
+    </ion-item>
+    <ion-note>forgot password?</ion-note>
+  </form>
+
+  <div>
+    <ion.text><p>Sign In with</p></ion.text>
+    <ion-button fill="clear" color="dark" ><ion-icon id="facebookIcon" name="logo-facebook" size="large"></ion-icon></ion-button>
+
+  </div>
+
+  <div>
+    <ion-button id="signUp" fill="clear" >Sign Up</ion-button>
+    <ion-button id="signIn" fill="clear" [routerLink]="['/master-list']">Sign In</ion-button>
+  </div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-note >
+    Terms and conditions
+  </ion-note>
+
+</ion-footer>
