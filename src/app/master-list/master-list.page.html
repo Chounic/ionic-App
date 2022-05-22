@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>master-list</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Master List</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="options-outline" size="large"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
+  <ion-list>
+    <ion-button fill="clear" disabled>missions</ion-button>
+    <ion-button fill="clear" disabled>missions</ion-button>
+
+    <ion-button fill="clear" disabled>missions</ion-button>
+
+  </ion-list>
 </ion-header>
 
-<ion-content>
+<ion-content> 
 
+  <ion-list>
+    <div *ngFor="let character of (characters | async)?.results" >
+      <ion-item button detail (click)="openDetails(character)">        
+        {{ character.name }}
+      </ion-item>
+    </div>
+  </ion-list>
 </ion-content>

@@ -17,6 +17,10 @@ const routes: Routes = [
   },  {
     path: 'master-list',
     loadChildren: () => import('./master-list/master-list.module').then( m => m.MasterListPageModule)
+  },
+  {
+    path: 'character-details',
+    loadChildren: () => import('./character-details/character-details.module').then( m => m.CharacterDetailsPageModule)
   }
 
 
