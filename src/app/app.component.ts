@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,5 +15,11 @@ export class AppComponent {
     { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
   
-  constructor() {}
+  constructor(private menuCtrl: MenuController) {}
+
+
+  closeMenu(url: string) {
+    this.menuCtrl.close();
+    url === '/sign-in' && this.menuCtrl.enable(false)
+  }
 }

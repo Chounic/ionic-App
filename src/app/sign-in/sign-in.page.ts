@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInPage implements OnInit {
 
-  constructor() { }
+  constructor(private menuCtrl: MenuController) {
+    
+   }
 
   ngOnInit() {
+  }
+
+  
+  ionViewDidLeave(): void {
+    this.menuCtrl.enable(true);
   }
 
 }
