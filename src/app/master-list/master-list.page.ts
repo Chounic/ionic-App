@@ -19,16 +19,21 @@ export class MasterListPage implements OnInit {
     this.characters = this.httpClient.get(
       'https://rickandmortyapi.com/api/character'
     );
+    }
+    
+    openDetails(character: any) {
+      this.router.navigate([
+        '/character-details',
+        { character: JSON.stringify(character) },
+      ]);
+    }
+
+    startsWithVowel(word: string){
+      const vowels = ("aeiouAEIOU"); 
+      return vowels.indexOf(word[0]) !== -1;
+   }
+    
+    ngOnInit() {}
+    
+    
   }
-
-  openDetails(character: any) {
-    this.router.navigate([
-      '/character-details',
-      { character: JSON.stringify(character) },
-    ]);
-  }
-
-  ngOnInit() {}
-
-
-}

@@ -5,26 +5,33 @@
     </ion-buttons>
 
     <ion-title class="ion-text-center">Master List</ion-title>
-    <ion-buttons slot="end">
+    <ion-buttons class="options-button"  slot="end">
       <ion-icon name="options-outline" size="large"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
-  <ion-list>
-    <ion-button fill="clear" disabled>missions</ion-button>
-    <ion-button fill="clear" disabled>missions</ion-button>
+  <ion-list class="nav-list">
+    <ion-button fill="clear" disabled size="small">Missions</ion-button>
+    <ion-button fill="clear" disabled size="small">Notes</ion-button>
 
-    <ion-button fill="clear" disabled>missions</ion-button>
-
+    <ion-button fill="clear" disabled size="small">Request</ion-button>
   </ion-list>
 </ion-header>
 
-<ion-content> 
-
+<ion-content >
   <ion-list>
-    <div *ngFor="let character of (characters | async)?.results" >
-      <ion-item button detail (click)="openDetails(character)">        
-        {{ character.name }}
-      </ion-item>
+    <div class="item-card" *ngFor="let character of (characters | async)?.results">
+      <ion-card button detail style="paddingTop:30px" (click)="openDetails(character)">
+        
+        <ion-img [src]="character.image" [alt]="character.name" style="height:250px" ></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ character.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          
+          <p>This character is {{ startsWithVowel(character.species) ? 'an' : 'a' }} {{ character.species }}. {{ character.species === 'Human' ? 'He' : 'It'}} appeared in {{ character.episode.length }} {{ character.episode.length > 1 ? 'episodes' : 'episode' }}. </p>
+        </ion-card-content>
+      </ion-card>
     </div>
   </ion-list>
+
 </ion-content>

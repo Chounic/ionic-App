@@ -1,5 +1,17 @@
-ion-header ion-list {
+.options-button {
+    margin-right: 10px;
+}
+
+ion-content ion-list {
+    --ion-background-color: var(--ion-color-light);
+    padding: 10px
+}
+
+.item-card {
+    --ion-background-color: #FFF;
+}
+
+.nav-list {
     display: flex;
     justify-content: space-evenly;
 }
-
