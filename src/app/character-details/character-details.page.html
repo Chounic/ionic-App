@@ -4,11 +4,42 @@
       <ion-back-button icon="chevron-back"></ion-back-button>
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ character.name }}</ion-title>
+    <ion-title>Details</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-card class="card-container" >
+        
+    <ion-img class="character-image" [src]="character.image" [alt]="character.name" ></ion-img>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center" color="tertiary"><h1>{{ character.name }}</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <p class="details">Species :</p>
+        <p>{{ character.species }}</p>
+      </ion-item>      
+      <ion-item>
+        <p class="details">Gender :</p>
+        <p>{{ character.gender }}</p>
+      </ion-item>
+      <ion-item>
+        <p class="details">Status :</p>
+        <p>{{ character.status }}</p>
+      </ion-item>
+      <ion-item>
+        <p class="details">Location :</p>
+        <p>{{ character.location.name }}</p>
+      </ion-item>
+      <ion-item>
+        <p class="details">Born in :</p>
+        <p>{{ character.origin.name }}</p>
+      </ion-item>
+      
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

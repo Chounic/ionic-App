@@ -22,9 +22,9 @@
     <div class="item-card" *ngFor="let character of (characters | async)?.results">
       <ion-card button detail style="paddingTop:30px" (click)="openDetails(character)">
         
-        <ion-img [src]="character.image" [alt]="character.name" style="height:250px" ></ion-img>
+        <ion-img [src]="character.image" [alt]="character.name" style="height:200px" ></ion-img>
         <ion-card-header>
-          <ion-card-title>{{ character.name }}</ion-card-title>
+          <ion-card-title class="ion-text-center">{{ character.name }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           

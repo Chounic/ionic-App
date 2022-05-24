@@ -1,0 +1,21 @@
+ion-content {
+    --padding-end: 10px;
+    --padding-start: 10px;}
+
+.card-container {
+    padding: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.character-image {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.details {
+    display: inline-block;
+    font-weight: bold;
+    min-width: 70px;
+    margin-right: 5px;
+}
