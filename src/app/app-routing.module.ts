@@ -8,13 +8,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
-  },  {
+  },
+  {
     path: 'master-list',
     loadChildren: () => import('./master-list/master-list.module').then( m => m.MasterListPageModule)
   },

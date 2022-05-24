@@ -9,10 +9,10 @@ export class AppComponent {
   public appPages = [
     { title: 'Sign In', url: '/sign-in', icon: 'mail' },
     { title: 'Master list', url: '/master-list', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Favorites', icon: 'heart' },
+    { title: 'Archived', icon: 'archive' },
+    { title: 'Trash', icon: 'trash' },
+    { title: 'Spam', icon: 'warning' },
   ];
   
   constructor(private menuCtrl: MenuController) {}

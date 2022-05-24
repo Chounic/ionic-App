@@ -5,13 +5,14 @@
       
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+          <ion-list-header>Menu</ion-list-header>
+          <ion-note>Feel free to navigate</ion-note>
 
             <ion-item
             *ngFor="let p of appPages; let i = index"
-              routerDirection="root"
-              [routerLink]="[p.url]"
+              routerDirection="root" 
+              [routerLink]="[p.url]" 
+              disabled="{{ !p.url }}"
               lines="none"
               detail="false"
               routerLinkActive="selected" 
