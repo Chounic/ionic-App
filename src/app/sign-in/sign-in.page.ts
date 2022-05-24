@@ -13,6 +13,7 @@ export class SignInPage implements OnInit {
    }
 
   ngOnInit() {
+    this.menuCtrl.enable(false);
   }
 
   
