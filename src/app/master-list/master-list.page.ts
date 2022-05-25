@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MenuController, NavController, NavParams } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CharacterProps } from '../Character.props';
 
 @Component({
   selector: 'app-master-list',
@@ -21,7 +22,7 @@ export class MasterListPage implements OnInit {
     );
     }
     
-    openDetails(character: any) {
+    openDetails(character: CharacterProps) {
       this.router.navigate([
         '/character-details',
         { character: JSON.stringify(character) },

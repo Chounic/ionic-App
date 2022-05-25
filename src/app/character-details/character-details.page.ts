@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CharacterProps } from '../Character.props';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CharacterDetailsPage implements OnInit {
 
-  character: any;
+  character: CharacterProps;
 
 
 
